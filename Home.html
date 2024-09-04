@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هدية لقمري</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4e1d2; /* لون خلفية رومانسي */
+            text-align: center;
+            padding-top: 50px;
+            margin: 0;
+        }
+
+        .question-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .question-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #d47fa6; /* لون النص */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #d47fa6; /* لون الزر */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c46b96; /* لون الزر عند التحويم */
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 25px;
+            font-family: 'Amiri', serif;
+            color: #e13ce7;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .question-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p, label {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML Content -->
+    <div id="question1" class="question-container">
+        <h1>سؤال 1</h1>
+        <p>كيف كانت طلعة الكوفي اليوم؟</p>
+        <form>
+            <label><input type="radio" name="answer1" value="حلوة"> حلوة</label>
+            <label><input type="radio" name="answer1" value="ما عجبني"> ما عجبني</label>
+            <label><input type="radio" name="answer1" value="تخيلتك وانت معي"> تخيلتك وانت معي</label>
+            <label><input type="radio" name="answer1" value="كنت افكر فيك"> كنت افكر فيك</label>
+            <label><input type="radio" name="answer1" value="ما حسيت بأي شعور"> ما حسيت بأي شعور</label>
+            <button type="button" onclick="submitAnswer(1)">إرسال</button>
+        </form>
+    </div>
+
+    <div id="question2" class="question-container hidden">
+        <h1>سؤال 2</h1>
+        <p>وش الي  يخليش مرتاحة ؟</p>
+        <form>
+            <label><input type="radio" name="answer2" value="الطبيعة"> الطبيعة</label>
+            <label><input type="radio" name="answer2" value="القراءة"> القراءة</label>
+            <label><input type="radio" name="answer2" value="الاهتمام"> الاهتمام</label>
+            <label><input type="radio" name="answer2" value="السفر"> السفر</label>
+            <label><input type="radio" name="answer2" value="الموسيقى"> الموسيقى</label>
+            <button type="button" onclick="submitAnswer(2)">إرسال</button>
+        </form>
+    </div>
+
+    <!-- Repeat the above pattern for questions 3 to 5 -->
+    <div id="question3" class="question-container hidden">
+        <h1>سؤال 3</h1>
+        <p>ويش هي أكلتش المفضلة؟</p>
+        <form>
+            <label><input type="radio" name="answer3" value="البيتزا"> البيتزا</label>
+            <label><input type="radio" name="answer3" value="البرغر"> البرغر</label>
+            <label><input type="radio" name="answer3" value="الأسماك"> الأسماك</label>
+            <label><input type="radio" name="answer3" value="المعكرونة"> المعكرونة</label>
+            <label><input type="radio" name="answer3" value="الحلويات"> الحلويات</label>
+            <button type="button" onclick="submitAnswer(3)">إرسال</button>
+        </form>
+    </div>
+
+    <div id="question4" class="question-container hidden">
+        <h1>سؤال 4</h1>
+        <p>وش هي فكرتش عن يوم مثالي؟</p>
+        <form>
+            <label><input type="radio" name="answer4" value="يوم معي"> يوم معي</label>
+            <label><input type="radio" name="answer4" value="يوم بدوني"> يوم بدوني</label>
+            <label><input type="radio" name="answer4" value="سهرة للصبح في الاتصال"> سهرة للصبح في الاتصال</label>
+            <label><input type="radio" name="answer4" value="يوم نتضارب فيه"> يوم نتضارب فيه</label>
+            <label><input type="radio" name="answer4" value="يوم في البيت بدون جدول"> يوم في البيت</label>
+            <button type="button" onclick="submitAnswer(4)">إرسال</button>
+        </form>
+    </div>
+
+    <div id="question5" class="question-container hidden">
+        <h1>سؤال 5</h1>
+        <p>ويش هو لونش المفضل؟</p>
+        <form>
+            <label><input type="radio" name="answer5" value="أزرق"> أزرق</label>
+            <label><input type="radio" name="answer5" value="أحمر"> أحمر</label>
+            <label><input type="radio" name="answer5" value="أخضر"> أخضر</label>
+            <label><input type="radio" name="answer5" value="أصفر"> أصفر</label>
+            <label><input type="radio" name="answer5" value="أسود"> أسود</label>
+            <button type="button" onclick="submitAnswer(5)">إرسال</button>
+        </form>
+    </div>
+
+    <div id="finalMessage" class="question-container hidden">
+        <h1>شكراً لإجاباتش!</h1>
+        <p>يا روحي وحياتي هذي الاغنية هدية مني .. أحبك:</p>
+        <iframe width="100%" height="215" src="https://www.youtube.com/embed/Dzbded6Hlb4?si=seLWEi1TR5TVzlJN" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <script>
+        function submitAnswer(questionNumber) {
+            var answers = document.getElementsByName('answer' + questionNumber);
+            var selectedAnswer;
+            for (var i = 0; i < answers.length; i++) {
+                if (answers[i].checked) {
+                    selectedAnswer = answers[i].value;
+                    break;
+                }
+            }
+
+            if (selectedAnswer) {
+                var message = document.getElementById('message');
+                message.innerText = "رسالة الى قمري: " + " -كل لحظة أقضيها معك هي نعمة لا أستطيع وصفها بالكلمات. أنت نبض قلبي وسر ابتسامتي، وأتمنى أن نبقى معًا إلى الأبد.!";
+                message.classList.remove('hidden');
+
+                // إخفاء السؤال الحالي وإظهار السؤال التالي
+                document.getElementById('question' + questionNumber).classList.add('hidden');
+                if (questionNumber < 5) {
+                    document.getElementById('question' + (questionNumber + 1)).classList.remove('hidden');
+                } else {
+                    document.getElementById('finalMessage').classList.remove('hidden');
+                }
+
+                // مسح الرسالة بعد ثواني وإظهار السؤال التالي
+                setTimeout(function() {
+                    message.classList.add('hidden');
+                }, 9000);
+
+            } else {
+                alert("الرجاء اختيار إجابة");
+            }
+        }
+    </script>
+</body>
+</html>
